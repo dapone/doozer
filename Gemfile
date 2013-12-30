@@ -12,7 +12,7 @@ gem 'devise', :git => 'git://github.com/plataformatec/devise.git', :ref => '49ae
 # gem 'sqlite3'
 
 # Use postgreSQL as the database for Active Record
-gem 'pg'
+ gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

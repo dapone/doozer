@@ -7503,3 +7503,301 @@ Processing by ListsController#show as HTML
   Rendered items/_form.html.erb (36.0ms)
   Rendered lists/show.html.erb within layouts/application (91.8ms)
 Completed 200 OK in 104ms (Views: 97.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-30 07:17:15 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mList Load (2.7ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered home/index.html.erb within layouts/application (150.9ms)
+Completed 200 OK in 254ms (Views: 224.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-30 07:17:15 -0500
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-12-30 07:17:15 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-30 07:17:15 -0500
+
+
+Started GET "/assets/lists.css?body=1" for 127.0.0.1 at 2013-12-30 07:17:15 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-30 07:17:15 -0500
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-12-30 07:17:15 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-30 07:17:15 -0500
+
+
+Started GET "/assets/lists.js?body=1" for 127.0.0.1 at 2013-12-30 07:17:15 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-30 07:17:15 -0500
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-12-30 07:17:37 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ypN8t5C4mgPP7peK6a8r7GPyirREJ2tpk2QzVPAJ1rg="}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 19ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-30 07:17:37 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-30 07:17:37 -0500
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-12-30 07:17:37 -0500
+
+
+Started GET "/assets/lists.css?body=1" for 127.0.0.1 at 2013-12-30 07:17:37 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-30 07:17:37 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-30 07:17:37 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-30 07:17:37 -0500
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-12-30 07:17:37 -0500
+
+
+Started GET "/assets/lists.js?body=1" for 127.0.0.1 at 2013-12-30 07:17:37 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-30 07:17:37 -0500
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-12-30 07:17:47 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (2.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-12-30 07:18:01 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DtQI2OMYuO4Ct2AnLYJPcXLvRBjeo0Zd1lxM2gwVHRc=", "user"=>{"email"=>"dapone@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'dapone@gmail.com' LIMIT 1
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."confirmation_token" = 'ZsFsevsSvWUmBerkaLiH' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "users" ("confirmation_sent_at", "confirmation_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["confirmation_sent_at", Mon, 30 Dec 2013 12:18:01 UTC +00:00], ["confirmation_token", "ZsFsevsSvWUmBerkaLiH"], ["created_at", Mon, 30 Dec 2013 12:18:01 UTC +00:00], ["email", "dapone@gmail.com"], ["encrypted_password", "$2a$10$IDwxm2AYz/P06pzfH5JyVOs74xIM6wVETqrvKo2P11d1oP2yA9VkG"], ["updated_at", Mon, 30 Dec 2013 12:18:01 UTC +00:00]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (1.0ms)
+
+Sent mail to dapone@gmail.com (1920.2ms)
+Date: Mon, 30 Dec 2013 07:18:01 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: dapone@gmail.com
+Message-ID: <52c16479bdca4_229b237f709056c6@ubuntuvm.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome dapone@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=ZsFsevsSvWUmBerkaLiH">Confirm my account</a></p>
+
+  [1m[36m (7.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2113ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-30 07:18:03 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-30 07:18:03 -0500
+
+
+Started GET "/assets/lists.css?body=1" for 127.0.0.1 at 2013-12-30 07:18:03 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-30 07:18:03 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-30 07:18:03 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-30 07:18:03 -0500
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-12-30 07:18:03 -0500
+
+
+Started GET "/assets/lists.js?body=1" for 127.0.0.1 at 2013-12-30 07:18:03 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-30 07:18:03 -0500
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-12-30 07:18:03 -0500
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-12-30 07:34:33 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (107.5ms)
+Completed 200 OK in 122ms (Views: 115.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/confirmation/new" for 127.0.0.1 at 2013-12-30 07:34:37 -0500
+Processing by Devise::ConfirmationsController#new as HTML
+  Rendered devise/shared/_links.erb (2.2ms)
+  Rendered devise/confirmations/new.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/confirmation" for 127.0.0.1 at 2013-12-30 07:34:44 -0500
+Processing by Devise::ConfirmationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DtQI2OMYuO4Ct2AnLYJPcXLvRBjeo0Zd1lxM2gwVHRc=", "user"=>{"email"=>"dapone@gmail.com"}, "commit"=>"Resend confirmation instructions"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'dapone@gmail.com' LIMIT 1
+  Rendered devise/mailer/confirmation_instructions.html.erb (0.7ms)
+
+Sent mail to dapone@gmail.com (1701.9ms)
+Date: Mon, 30 Dec 2013 07:34:44 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: dapone@gmail.com
+Message-ID: <52c16864a22ac_229b230e79a857bb@ubuntuvm.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome dapone@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=ZsFsevsSvWUmBerkaLiH">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 1731ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 07:34:46 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 19ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-30 07:34:46 -0500
+
+
+Started GET "/assets/lists.css?body=1" for 127.0.0.1 at 2013-12-30 07:34:46 -0500
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-12-30 07:34:46 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-30 07:34:46 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-30 07:34:46 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-30 07:34:46 -0500
+
+
+Started GET "/assets/lists.js?body=1" for 127.0.0.1 at 2013-12-30 07:34:46 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-30 07:34:46 -0500
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-12-30 07:34:46 -0500
+
+
+Started GET "/users/confirmation/new" for 127.0.0.1 at 2013-12-30 07:39:42 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::ConfirmationsController#new as HTML
+  Rendered devise/shared/_links.erb (3.2ms)
+  Rendered devise/confirmations/new.html.erb within layouts/application (128.4ms)
+Completed 200 OK in 258ms (Views: 227.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/confirmation" for 127.0.0.1 at 2013-12-30 07:39:49 -0500
+Processing by Devise::ConfirmationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DtQI2OMYuO4Ct2AnLYJPcXLvRBjeo0Zd1lxM2gwVHRc=", "user"=>{"email"=>"dapone@gmail.com"}, "commit"=>"Resend confirmation instructions"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'dapone@gmail.com' LIMIT 1
+  Rendered devise/mailer/confirmation_instructions.html.erb (0.9ms)
+
+Sent mail to dapone@gmail.com (1800.6ms)
+Date: Mon, 30 Dec 2013 07:39:49 -0500
+From: bot@doozer.co
+Reply-To: bot@doozer.co
+To: dapone@gmail.com
+Message-ID: <52c16995ae341_24162337204c247fc@ubuntuvm.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome dapone@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://doozer.co/users/confirmation?confirmation_token=ZsFsevsSvWUmBerkaLiH">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 1839ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 07:39:51 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (3.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 39ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-30 07:39:51 -0500
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-12-30 07:39:51 -0500
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-12-30 07:39:51 -0500
+
+
+Started GET "/assets/lists.js?body=1" for 127.0.0.1 at 2013-12-30 07:39:51 -0500
+
+
+Started GET "/assets/lists.css?body=1" for 127.0.0.1 at 2013-12-30 07:39:51 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-30 07:39:51 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-30 07:39:51 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-30 07:39:51 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-30 07:39:51 -0500

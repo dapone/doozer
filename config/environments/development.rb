@@ -27,5 +27,15 @@ DeviseExample::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+#  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+config.action_mailer.default_url_options = { :host => 'doozer.co' }
+ActionMailer::Base.smtp_settings = {
+  :address        => "smtp.sendgrid.net",
+  :port           => "587",
+  :authentication => :plain,
+  :user_name      => ENV['app20890282@heroku.com'],
+  :password       => ENV['dfjtxuck'],
+  :domain         => ENV['doozer.co']
+}
+
 end
