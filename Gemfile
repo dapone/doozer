@@ -9,7 +9,10 @@ gem 'rails', '4.0.0'
 gem 'devise', :git => 'git://github.com/plataformatec/devise.git', :ref => '49aebde'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
+
+# Use postgreSQL as the database for Active Record
+gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
