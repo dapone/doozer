@@ -1,0 +1,40 @@
+<h1>Doozer!</h1>
+
+<% unless user_signed_in? -%>
+
+  <p><%= link_to 'Sign in', new_user_session_path %></p>
+  <p><%= link_to 'Need an account?', new_user_registration_path %></p>
+
+<% end -%>
+
+<% if user_signed_in? %>
+
+</br>
+</br>
+<h3>Current Lists</h3>
+ 
+<table>
+ 
+  <% current_user.lists.each do |list| %>
+    <tr>
+      <td><%= link_to list.title, list %></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td><%= list.description %></td>
+ 
+    </tr>
+  <% end %>
+</table>
+
+</br>
+</br>
+
+<%= link_to 'New List', new_list_path %>
+
+
+
+
+
+
+<% end %>

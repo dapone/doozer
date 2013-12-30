@@ -1,0 +1,7 @@
+<p>
+  <h3><%= item.title %> <%= link_to 'delete', [item.list, item], method: :delete, data: {confirm: 'Are you sure?'} %>  </h3>
+</p>
+ 
+<p>
+  <%= item.body %>
+</p>

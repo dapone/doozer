@@ -1,0 +1,23 @@
+<%= link_to 'edit list description', edit_list_path(@list) %> |
+<%= link_to 'delete list', list_path(@list), method: :delete, data: {confirm: 'Really? Did you finish everything on this list?'} %>
+
+
+
+<p>
+  <h1><%= @list.title %></h1>
+
+   <%= @list.description %>
+</p>
+
+<h3>items:</h3>
+<%= render @list.items %>
+
+</br>
+</br>
+
+<h3>add an item</h3>
+<%= render "items/form" %>
+
+
+
+
