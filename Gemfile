@@ -14,6 +14,9 @@ gem 'devise', :git => 'git://github.com/plataformatec/devise.git', :ref => '49ae
 # Use postgreSQL as the database for Active Record
  gem 'pg'
 
+# Heroku says to use this thing:
+gem 'rails_12factor'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
