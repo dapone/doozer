@@ -8,10 +8,10 @@ gem 'rails', '4.0.0'
 # Use Devise for user authentication
 gem 'devise', :git => 'git://github.com/plataformatec/devise.git', :ref => '49aebde'
 
-# Use sqlite3 as the database for Active Record
-# gem 'sqlite3'
+# Use sqlite3 as the local development database for Active Record 
+ gem 'sqlite3'
 
-# Use postgreSQL as the database for Active Record
+# Use postgreSQL as the production heroku database for Active Record
  gem 'pg'
 
 # Heroku says to use this thing:
